@@ -5,15 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Variedad extends Model
+class Calibre extends Model
 {
-    protected $table = 'variedades';
-    
-    protected $fillable = [
+    protected $table = 'calibres';
+
+     protected $fillable = [
         'nombre',
         'descripcion',
         'producto_id',
-        'estado',
+        'estado'
     ];
 
     protected $casts = [

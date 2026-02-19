@@ -23,4 +23,9 @@ class Producto extends Model
     {
         return $this->hasMany(Variedad::class);
     }
+
+    public function calibres(): HasMany
+    {
+        return $this->hasMany(Calibre::class);
+    }
 }
