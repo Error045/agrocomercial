@@ -23,4 +23,9 @@ class EstadoRecepcion extends Model
     {
         return $this->hasMany(EstadoRecepcionDetalle::class, 'estados_recepciones_id');
     }
+
+    public function recepciones(): HasMany
+    {
+        return $this->hasMany(Recepcion::class, 'estados_recepciones_id');
+    }
 }
