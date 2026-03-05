@@ -52,4 +52,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Recepcion::class, 'users_id');
     }
+
+    public function recepcionesDetalles(): HasMany
+    {
+        return $this->hasMany(RecepcionDetalle::class, 'users_id');
+    }
 }

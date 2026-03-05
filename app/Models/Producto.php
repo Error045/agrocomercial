@@ -28,4 +28,9 @@ class Producto extends Model
     {
         return $this->hasMany(Calibre::class);
     }
+
+    public function recepcionesDetalles(): HasMany
+    {
+        return $this->hasMany(RecepcionDetalle::class, 'productos_id');
+    }
 }
