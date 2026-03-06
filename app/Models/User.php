@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(RecepcionDetalle::class, 'users_id');
     }
+
+    public function procesos(): HasMany
+    {
+        return $this->hasMany(Proceso::class, 'users_id');
+    }
 }

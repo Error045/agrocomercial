@@ -51,4 +51,9 @@ class Recepcion extends Model
         return $this->hasMany(RecepcionDetalle::class, 'recepciones_id');
     }
 
+    public function procesos(): HasMany
+    {
+        return $this->hasMany(Proceso::class, 'recepciones_id');
+    }
+
 }
