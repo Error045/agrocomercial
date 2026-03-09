@@ -27,4 +27,9 @@ class Contenedor extends Model
     {
         return $this->hasMany(RecepcionDetalle::class, 'contenedores_id');
     }
+
+    public function procesosDetalles(): HasMany
+    {
+        return $this->hasMany(ProcesoDetalle::class, 'contenedores_id');
+    }
 }

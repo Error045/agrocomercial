@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Proceso extends Model
 {
@@ -39,5 +40,10 @@ class Proceso extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'users_id');
+    }
+
+    public function procesosDetalles(): HasMany
+    {
+        return $this->hasMany(ProcesoDetalle::class, 'procesos_id');
     }
 }

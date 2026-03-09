@@ -30,4 +30,9 @@ class Variedad extends Model
     {
         return $this->hasMany(RecepcionDetalle::class, 'variedades_id');
     }
+
+    public function procesosDetalles(): HasMany
+    {
+        return $this->hasMany(ProcesoDetalle::class, 'variedades_id');
+    }
 }

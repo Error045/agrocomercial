@@ -33,4 +33,9 @@ class Producto extends Model
     {
         return $this->hasMany(RecepcionDetalle::class, 'productos_id');
     }
+
+    public function procesosDetalles(): HasMany
+    {
+        return $this->hasMany(ProcesoDetalle::class, 'productos_id');
+    }
 }

@@ -62,4 +62,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Proceso::class, 'users_id');
     }
+
+    public function procesosDetalles(): HasMany
+    {
+        return $this->hasMany(ProcesoDetalle::class, 'users_id');
+    }
 }
