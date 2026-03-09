@@ -23,4 +23,9 @@ class TipoUbicacion extends Model
     {
         return $this->hasMany(RecepcionDetalle::class, 'tipos_ubicaciones_id');
     }
+
+    public function productosCalibrados(): HasMany
+    {
+        return $this->hasMany(ProductoCalibrado::class, 'tipos_ubicaciones_id');
+    }
 }

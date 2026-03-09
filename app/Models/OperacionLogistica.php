@@ -24,4 +24,9 @@ class OperacionLogistica extends Model
     {
         return $this->hasMany(RecepcionDetalle::class, 'operaciones_logisticas_id');
     }
+
+    public function productosCalibrados(): HasMany
+    {
+        return $this->hasMany(ProductoCalibrado::class, 'operaciones_logisticas_id');
+    }
 }

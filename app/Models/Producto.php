@@ -38,4 +38,9 @@ class Producto extends Model
     {
         return $this->hasMany(ProcesoDetalle::class, 'productos_id');
     }
+
+    public function productosCalibrados(): HasMany
+    {
+        return $this->hasMany(ProductoCalibrado::class, 'productos_id');
+    }
 }

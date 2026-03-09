@@ -56,4 +56,9 @@ class Recepcion extends Model
         return $this->hasMany(Proceso::class, 'recepciones_id');
     }
 
+    public function productosCalibrados(): HasMany
+    {
+        return $this->hasMany(ProductoCalibrado::class, 'recepciones_id');
+    }
+
 }

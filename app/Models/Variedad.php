@@ -35,4 +35,9 @@ class Variedad extends Model
     {
         return $this->hasMany(ProcesoDetalle::class, 'variedades_id');
     }
+
+    public function productosCalibrados(): HasMany
+    {
+        return $this->hasMany(ProductoCalibrado::class, 'variedades_id');
+    }
 }

@@ -72,4 +72,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(RecepcionDetalleProceso::class, 'users_id');
     }
+
+    public function productosCalibrados(): HasMany
+    {
+        return $this->hasMany(ProductoCalibrado::class, 'users_id');
+    }
 }
