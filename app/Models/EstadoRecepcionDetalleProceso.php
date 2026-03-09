@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class EstadoRecepcionDetalleProceso extends Model
 {
@@ -17,4 +18,9 @@ class EstadoRecepcionDetalleProceso extends Model
     protected $casts = [
         'estado' => 'boolean',
     ];
+
+    public function recepcionesDetalleProcesos(): HasMany
+    {
+        return $this->hasMany(RecepcionDetalleProceso::class, 'estado_r_d_p_id');
+    }
 }

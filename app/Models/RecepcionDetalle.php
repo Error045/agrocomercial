@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class RecepcionDetalle extends Model
 {
@@ -72,5 +73,10 @@ class RecepcionDetalle extends Model
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'users_id');
+    }
+
+    public function recepcionesDetalleProcesos(): HasMany
+    {
+        return $this->hasMany(RecepcionDetalleProceso::class, 'recepciones_detalles_id');
     }
 }
