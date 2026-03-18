@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion')->nullable();
-            $table->foreignId('estados_recepciones_id')->constrained('estados_recepciones')->onDelete('cascade');    
+            $table->foreignId('estados_recepciones_id')->constrained('estados_recepciones')->onDelete('cascade');
             $table->boolean	('estado')->nullable()->default(true);
             $table->timestamps();
         });

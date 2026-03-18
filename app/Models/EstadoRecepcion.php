@@ -19,11 +19,6 @@ class EstadoRecepcion extends Model
         'estado' => 'boolean',
     ];
 
-    public function detalles(): HasMany
-    {
-        return $this->hasMany(EstadoRecepcionDetalle::class, 'estados_recepciones_id');
-    }
-
     public function recepciones(): HasMany
     {
         return $this->hasMany(Recepcion::class, 'estados_recepciones_id');

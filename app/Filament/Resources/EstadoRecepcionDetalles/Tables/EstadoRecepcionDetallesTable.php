@@ -21,9 +21,6 @@ class EstadoRecepcionDetallesTable
                     ->searchable(),
                 TextColumn::make('descripcion')
                     ->searchable(),
-                TextColumn::make('estadoRecepcion.nombre')
-                    ->label('Estado de Recepción')
-                    ->searchable(),
                 IconColumn::make('estado')
                     ->boolean(),
                 TextColumn::make('created_at')

@@ -18,9 +18,6 @@ class EstadoRecepcionDetalleForm
                     ->required(),
                 Textarea::make('descripcion')
                     ->default(null),
-                Select::make('estados_recepciones_id')
-                    ->relationship('estadoRecepcion','nombre')
-                    ->required(),
                 Toggle::make('estado')
                     ->default(true)
             ]);

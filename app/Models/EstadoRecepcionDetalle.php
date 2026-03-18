@@ -13,18 +13,12 @@ class EstadoRecepcionDetalle extends Model
     protected $fillable = [
         'nombre',
         'descripcion',
-        'estados_recepciones_id',
         'estado',
     ];
 
     protected $casts = [
         'estado' => 'boolean',
     ];
-
-    public function estadoRecepcion(): BelongsTo
-    {
-        return $this->belongsTo(EstadoRecepcion::class, 'estados_recepciones_id');
-    }
 
     public function recepcionesDetalles(): HasMany
     {

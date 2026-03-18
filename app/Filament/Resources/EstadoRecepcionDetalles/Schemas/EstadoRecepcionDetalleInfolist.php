@@ -15,9 +15,6 @@ class EstadoRecepcionDetalleInfolist
                 TextEntry::make('nombre'),
                 TextEntry::make('descripcion')
                     ->placeholder('-'),
-                TextEntry::make('estadoRecepcion.nombre')
-                    ->label('Estado de Recepción')
-                    ->placeholder('-'),
                 IconEntry::make('estado')
                     ->boolean()
                     ->placeholder('-'),
